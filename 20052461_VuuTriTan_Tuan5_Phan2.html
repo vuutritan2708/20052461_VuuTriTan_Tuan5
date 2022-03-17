@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20052461_VuuTriTan_Tuan5 (2)</title>
+</head>
+<body>
+    <script>
+        function KiemtraHoTen() {
+            let mauKT = /^([A-Za-z]+)((\s{1}[A-Za-z]+){1,})/;
+            let chuoi = document.getElementById('txtKT').value.trim();
+            if (mauKT.test(chuoi) == true) {
+                spKT.innerText = "Họ tên nhập đúng cú pháp";
+            }
+            else {
+                spKT.innerText = "Họ tên nhập sai cú pháp";
+            }
+        }
+    </script>
+    <form action="" method="post" style="width: 500px;">
+        <fieldset>
+            <legend>Nhập chuỗi cần kiểm tra: </legend>
+            <label for="lblKT">Chuỗi kiểm tra: </label>
+            <input type="text" name="txtKT" id="txtKT" onblur="return KiemtraHoTen();">
+            <span id="spKT">*</span>
+        </fieldset>
+    </form>
+</body>
+</html>
